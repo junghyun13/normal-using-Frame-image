@@ -5,12 +5,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 public class LabelEX extends JFrame {
     private JFrame frame;
     private int index = 0; // 인덱스 초기화
     private JLabel lblImage; // JLabel을 인스턴스 변수로 선언
-
     private static final String[] IMAGES = { // 이미지 경로 문자열로 저장
         "images/bicon.jpg",
         "images/bicon1.png",

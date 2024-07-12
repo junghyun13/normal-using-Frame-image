@@ -19,14 +19,11 @@ public class LabelEX extends JFrame {
         frame.setBounds(100, 100, 450, 450);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
-
         Font font = new Font("굴림", Font.BOLD, 48);
-
         lblImage = new JLabel();
         lblImage.setBounds(93, 10, 256, 256);
         lblImage.setIcon(new ImageIcon(IMAGES[index]));
         frame.getContentPane().add(lblImage);
-
         JButton btnPrev = new JButton("이전");
         btnPrev.addActionListener(new ActionListener() {
             @Override

@@ -16,7 +16,6 @@ public class LabelEX extends JFrame {
         "images/bicon1.png",
         "images/normalicon1.jpg"
     };
-
     public void init() {
         frame = new JFrame();
         frame.setBounds(100, 100, 450, 450);
@@ -37,15 +36,11 @@ public class LabelEX extends JFrame {
                 if (index > 0) { // 현재 인덱스가 0보다 크면
                     index--; // 인덱스를 감소
                 } else { // 현재 인덱스가 0이면
-                    index = IMAGES.length - 1; // 배열의 가장 큰 인덱스 번호로 변경
-                }
-                lblImage.setIcon(new ImageIcon(IMAGES[index])); // 버튼 누를 때마다 다음 이미지로 이동
-            }
-        });
+                    index = IMAGES.length - 1; // 배열의 가장 큰 인덱스 번호로 변경}
+                lblImage.setIcon(new ImageIcon(IMAGES[index])); // 버튼 누를 때마다 다음 이미지로 이동} });
         btnPrev.setFont(font);
         btnPrev.setBounds(56, 321, 141, 80);
         frame.getContentPane().add(btnPrev);
-
         JButton btnNext = new JButton("다음");
         btnNext.addActionListener(new ActionListener() {
             @Override
@@ -55,19 +50,15 @@ public class LabelEX extends JFrame {
                 } else { // 현 인덱스가 문자열의 길이가 -1이 되는 경우
                     index = 0; // 인덱스를 0으로 초기화(0번으로 변경)
                 }
-                lblImage.setIcon(new ImageIcon(IMAGES[index]));
-            }
-        });
+                lblImage.setIcon(new ImageIcon(IMAGES[index]));} });
         btnNext.setFont(font);
         btnNext.setBounds(245, 321, 141, 80);
         frame.getContentPane().add(btnNext);
     }
-
     public LabelEX() {
         init();
         frame.setVisible(true); // 프레임을 표시하도록 이동
     }
-
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -78,6 +69,4 @@ public class LabelEX extends JFrame {
                     e.printStackTrace();
                 }
             }
-        });
-    }
-}
+        }); } }
